@@ -1,17 +1,19 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+console.log("API Key:", import.meta.env.VITE_FIREBASE_API_KEY); // For Vite
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAbHyeEKqP57BgLZ4hompM67MCK8fvEbCo",
-  authDomain: "todo-d8c28.firebaseapp.com",
-  projectId: "todo-d8c28",
-  storageBucket: "todo-d8c28.appspot.com",
-  messagingSenderId: "934174536390",
-  appId: "1:934174536390:web:616b74e603cb34a4bbddc7",
-  measurementId: "G-92TP75D9QV"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
+console.log("API Key:", import.meta.env.VITE_FIREBASE_API_KEY); // For Vite
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export default app;
