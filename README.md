@@ -1,8 +1,9 @@
-# React + Vite
+# https://todo-list-bi8q.vercel.app/
+#A To-Do List is a simple task management tool that helps users organize and track their daily tasks. It allows users to add, edit, and delete tasks, mark them as completed, and prioritize important ones. A to-do list can be digital (such as an app or web-based tool) or written on paper, making it a useful productivity tool for personal and professional use.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+
+
