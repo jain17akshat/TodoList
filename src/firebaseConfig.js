@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-console.log("API Key:", import.meta.env.VITE_FIREBASE_API_KEY); // For Vite
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -11,7 +10,6 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
-console.log("API Key:", import.meta.env.VITE_FIREBASE_API_KEY); // For Vite
 
 
 const app = initializeApp(firebaseConfig);
