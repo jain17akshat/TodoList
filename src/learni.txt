@@ -1,0 +1,224 @@
+// import React, { useState } from "react";
+// import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+// import TodoList from "./TodoList";  // ✅ Fixed import (case-sensitive)
+// import { TodoProvider } from "./Context/TodoContext";  // ✅ Wrap the app with context provider
+// import "./App.css";
+
+// function Login() {
+//   const [username, setUsername] = useState("");
+//   const [password, setPassword] = useState("");
+//   const [error, setError] = useState("");  
+//   const navigate = useNavigate();  
+
+//   const handleLogin = (e) => {
+//     e.preventDefault();
+    
+//     if (!username.trim() || !password.trim()) {
+//       setError("⚠️ Please enter both username and password!");
+//       return;
+//     }
+
+//     setError("");  
+//     alert(`Welcome, ${username}!`);
+//     navigate("/todo");  
+//   };
+
+//   return (
+//     <div className="login-container">
+//       <div className="login-card">
+//         <h2>Login</h2>
+//         <form onSubmit={handleLogin}>
+//           <label htmlFor="username">Username</label>
+//           <input
+//             type="text"
+//             id="username"
+//             placeholder="Enter username"
+//             value={username}
+//             onChange={(e) => setUsername(e.target.value)}
+//           />
+
+//           <label htmlFor="password">Password</label>
+//           <input
+//             type="password"
+//             id="password"
+//             placeholder="Enter password"
+//             value={password}
+//             onChange={(e) => setPassword(e.target.value)}
+//           />
+
+//           {error && <p className="error-text">{error}</p>}
+
+//           <button type="submit">Login</button>
+//         </form>
+//       </div>
+//     </div>
+//   );
+// }
+
+// function App() {
+//   return (
+//     <TodoProvider>  {/* ✅ Wrap the entire app in TodoProvider */}
+//       <Router>
+//         <Routes>
+//           <Route path="/" element={<Login />} />
+//           <Route path="/todo" element={<TodoList />} />
+//         </Routes>
+//       </Router>
+//     </TodoProvider>
+//   );
+// }
+
+// export default App;
+// import React, { useState } from "react";
+// import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+// import TodoList from "./TodoList";  // ✅ Import To-Do List component
+// import { TodoProvider } from "./Context/TodoContext";  // ✅ Wrap the app with context provider
+// import "./App.css";
+
+// function Login() {
+//   const [username, setUsername] = useState("");
+//   const [password, setPassword] = useState("");
+//   const [error, setError] = useState("");  
+//   const navigate = useNavigate();  
+
+//   const handleLogin = (e) => {
+//     e.preventDefault();
+    
+//     if (!username.trim() || !password.trim()) {
+//       setError("⚠️ Please enter both username and password!");
+//       return;
+//     }
+
+//     setError("");  
+//     alert(`Welcome, ${username}!`);
+//     navigate("/todo");  // ✅ Redirect to To-Do List after login
+//   };
+
+//   return (
+//     <div className="auth-container">
+//       <div className="auth-card">
+//         <h2>Login</h2>
+//         <form onSubmit={handleLogin}>
+//           <label htmlFor="username">Username</label>
+//           <input
+//             type="text"
+//             id="username"
+//             placeholder="Enter username"
+//             value={username}
+//             onChange={(e) => setUsername(e.target.value)}
+//           />
+
+//           <label htmlFor="password">Password</label>
+//           <input
+//             type="password"
+//             id="password"
+//             placeholder="Enter password"
+//             value={password}
+//             onChange={(e) => setPassword(e.target.value)}
+//           />
+
+//           {error && <p className="error-text">{error}</p>}
+
+//           <button type="submit">Login</button>
+//         </form>
+
+//         <p>
+//           Don't have an account?{" "}
+//           <button className="toggle-btn" onClick={() => navigate("/signup")}>
+//             Sign Up
+//           </button>
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
+
+// function Signup() {
+//   const [username, setUsername] = useState("");
+//   const [password, setPassword] = useState("");
+//   const [error, setError] = useState("");
+//   const navigate = useNavigate();
+
+//   const handleSignup = (e) => {
+//     e.preventDefault();
+    
+//     if (!username.trim() || !password.trim()) {
+//       setError("⚠️ Please enter a valid username and password!");
+//       return;
+//     }
+
+//     setError("");
+//     alert(`Account created for ${username}! Please login.`);
+//     navigate("/");  // ✅ Redirect to Login page after signup
+//   };
+
+//   return (
+//     <div className="auth-container">
+//       <div className="auth-card">
+//         <h2>Sign Up</h2>
+//         <form onSubmit={handleSignup}>
+//           <label htmlFor="username">Username</label>
+//           <input
+//             type="text"
+//             id="username"
+//             placeholder="Choose a username"
+//             value={username}
+//             onChange={(e) => setUsername(e.target.value)}
+//           />
+
+//           <label htmlFor="password">Password</label>
+//           <input
+//             type="password"
+//             id="password"
+//             placeholder="Choose a password"
+//             value={password}
+//             onChange={(e) => setPassword(e.target.value)}
+//           />
+
+//           {error && <p className="error-text">{error}</p>}
+
+//           <button type="submit">Sign Up</button>
+//         </form>
+
+//         <p>
+//           Already have an account?{" "}
+//           <button className="toggle-btn" onClick={() => navigate("/")}>
+//             Login
+//           </button>
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
+
+// function App() {
+//   return (
+//     <TodoProvider>  {/* ✅ Wrap the entire app in TodoProvider */}
+//       <Router>
+//         <Routes>
+//           <Route path="/" element={<Login />} />
+//           <Route path="/signup" element={<Signup />} />
+//           <Route path="/todo" element={<TodoList />} />
+//         </Routes>
+//       </Router>
+//     </TodoProvider>
+//   );
+// }
+
+// export default App;
+
+
+
+
+const express = require('express');
+const connectDB = require('./db');
+
+const app = express();
+
+// Connect to MongoDB
+connectDB();
+
+// Your other middleware and routes here
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
