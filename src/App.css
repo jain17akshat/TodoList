@@ -1,14 +1,12 @@
 
 
-/* General Reset */
-* {
+ {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-/* Centering Main App */
 body {
   background-color: #f4f4f4;
   display: flex;
@@ -17,7 +15,6 @@ body {
   min-height: 100vh;
 }
 
-/* Container for the Todo App */
 .todo-container {
   background: white;
   width: 450px;
@@ -27,14 +24,12 @@ body {
   text-align: center;
 }
 
-/* Heading */
 .todo-container h1 {
   font-size: 24px;
   color: #333;
   margin-bottom: 15px;
 }
 
-/* Todo Input */
 .todo-form input {
   width: 75%;
   padding: 10px;
@@ -60,14 +55,12 @@ body {
   background: #45a049;
 }
 
-/* Todo List */
 .todo-list {
   list-style: none;
   padding: 0;
   margin-top: 15px;
 }
 
-/* Todo Item */
 .todo-item {
   display: flex;
   align-items: center;
@@ -84,7 +77,6 @@ body {
   transform: scale(1.02);
 }
 
-/* Checkbox & Text */
 .todo-item input[type="checkbox"] {
   transform: scale(1.3);
   margin-right: 10px;
@@ -97,14 +89,12 @@ body {
   color: #333;
 }
 
-/* Completed Todo */
 .todo-item.completed span {
   text-decoration: line-through;
   color: gray;
   opacity: 0.7;
 }
 
-/* Delete Button */
 .todo-item button {
   background: #ff4d4d;
   color: white;
@@ -118,7 +108,6 @@ body {
   background: #e60000;
 }
 
-/* Responsive Design */
 @media (max-width: 500px) {
   .todo-container {
     width: 90%;
@@ -170,7 +159,6 @@ body {
   color: #888;
 }
 
-/* Centering the login card */
 .login-container {
   display: flex;
   justify-content: center;
@@ -181,7 +169,6 @@ body {
   padding: 20px;
 }
 
-/* Login card styling */
 .login-card {
   background: white;
   padding: 20px;
@@ -193,12 +180,10 @@ body {
   max-width: 90%;
 }
 
-/* Hover effect */
 .login-card:hover {
   transform: scale(1.05);
 }
 
-/* Form styles */
 form {
   display: flex;
   flex-direction: column;
@@ -221,13 +206,11 @@ input {
   font-size: 14px;
 }
 
-/* Accessibility: Highlight input on focus */
 input:focus {
   outline: 2px solid #007BFF;
   border-color: #007BFF;
 }
 
-/* Button styling */
 button {
   background: #4facfe;
   color: white;
@@ -244,19 +227,16 @@ button:hover {
   background: #00c6ff;
 }
 
-/* Button active (click effect) */
 button:active {
   background: #0088cc;
 }
 
-/* Error message styling */
 .error-text {
   color: red;
   font-size: 14px;
   margin-top: 5px;
 }
 
-/* Sign-up link */
 p {
   margin-top: 10px;
 }
@@ -270,7 +250,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Make Sign Up button look like a link */
 .signup-btn {
   background: none;
   border: none;
@@ -284,7 +263,6 @@ a:hover {
 .signup-btn:hover {
   color: #0056b3;
 }
-/* Full-screen background */
 * {
   margin: 0;
   padding: 0;
@@ -300,7 +278,6 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-/* Container for login */
 .login-container {
   display: flex;
   justify-content: center;
@@ -309,7 +286,6 @@ html, body {
   height: 100vh;
 }
 
-/* Login box styling */
 .login-box {
   background: white;
   padding: 25px;
@@ -319,7 +295,6 @@ html, body {
   width: 320px;
 }
 
-/* Form elements */
 .login-box h2 {
   margin-bottom: 15px;
   font-size: 22px;
@@ -331,7 +306,6 @@ html, body {
   gap: 10px;
 }
 
-/* Input styling */
 .login-box input {
   padding: 10px;
   border: 1px solid #ccc;
@@ -341,7 +315,6 @@ html, body {
   width: 100%;
 }
 
-/* Button styling */
 .login-box button {
   background-color: #2196F3;
   color: white;
