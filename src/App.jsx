@@ -20,7 +20,7 @@ function Signup() {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       alert("Signup successful! Please log in.");
-      navigate("/"); // Redirect to login after signup
+      navigate("/"); 
     } catch (error) {
       setError(error.message);
     }
@@ -51,7 +51,7 @@ function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       alert("Login successful!");
-      navigate("/todo"); // Redirect to TodoList after login
+      navigate("/todo"); 
     } catch (error) {
       setError(error.message);
     }
